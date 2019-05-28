@@ -55,4 +55,34 @@ public class Faculty extends Person
     public void setJoiningdate(Date joiningdate) {
         this.joiningdate = joiningdate;
     }
+
+    @Override
+    public String toString() {
+        return "Faculty{" +
+                "deptname='" + deptname + '\'' +
+                ", designation='" + designation + '\'' +
+                ", salary=" + salary +
+                ", joiningdate=" + joiningdate +
+                '}';
+    }
+
+    public void displayFacultyInfo()
+    {
+        System.out.println("--------------------------------------------------");
+        System.out.println("--------------- Faculty Information  -------------");
+        System.out.println("--------------------------------------------------");
+
+        System.out.println(" Faculty ID : "+getId());
+        System.out.println(" Full Name : "+getFullName());
+        System.out.println(" Gender : "+getGender());
+        System.out.println(" Birth Date : "+getBirthdate());
+        System.out.println(" Email : "+getEmail());
+        System.out.println(" Department Name : "+getDeptname());
+        System.out.println(" Designation : "+getDesignation());
+        System.out.println(" Salary : "+getSalary());
+        System.out.println(" Joining Date : "+getJoiningdate());
+
+        System.out.println("--------------------------------------------------");
+
+    }
 }

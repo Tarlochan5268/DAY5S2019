@@ -169,6 +169,7 @@ public class Student extends Person
         System.out.println(" Gender : "+getGender());
         System.out.println(" Course : "+getCoursename());
         System.out.println(" Birth Date : "+getBirthdate());
+        System.out.println(" Email : "+getEmail());
         int i=1;
         for(float mark:getMarks())
         {
