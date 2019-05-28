@@ -100,7 +100,8 @@ public class Person
 
     public void displayComputerDetails()
     {
-        computer.displayComputerDetails();
+        System.out.println(" Computer Id : "+computer.getId());
+        System.out.println(" Company Name : "+computer.getCompanyname());
     }
     @Override
     public String toString() {
