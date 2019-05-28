@@ -1,5 +1,7 @@
 package com.lambton;
 
+import hardware.Computer;
+
 import java.util.Date;
 
 public class Person
@@ -10,6 +12,15 @@ public class Person
     private char gender;
     private Date birthdate;
     private String email;
+    private Computer computer;
+
+    public Computer getComputer() {
+        return computer;
+    }
+
+    public void setComputer(Computer computer) {
+        this.computer = computer;
+    }
 
     //blank constructor
     public Person() {
@@ -23,6 +34,16 @@ public class Person
         this.birthdate = birthdate;
         this.email = email;
     }
+    public Person(int id, String firstname, String lastname, char gender, Date birthdate, String email,Computer computer) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.gender = gender;
+        this.birthdate = birthdate;
+        this.email = email;
+        this.computer=computer;
+    }
+
 
     public int getId() {
         return id;
@@ -77,6 +98,10 @@ public class Person
         return String.format(" %s %s ",this.firstname,this.lastname);
     }
 
+    public void displayComputerDetails()
+    {
+        computer.displayComputerDetails();
+    }
     @Override
     public String toString() {
         return "Person{" +

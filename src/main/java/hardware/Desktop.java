@@ -4,6 +4,9 @@ public class Desktop extends Computer {
     private String keyboardcompanyname;
     private String screentype;
 
+    public Desktop() {
+    }
+
     public Desktop(int id, String companyname, String keyboardcompanyname, String screentype) {
         super(id, companyname);
         this.keyboardcompanyname = keyboardcompanyname;

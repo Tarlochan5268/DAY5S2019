@@ -9,6 +9,9 @@ public class Faculty extends Person
     private float salary;
     private Date joiningdate;
 
+    public Faculty() {
+    }
+
     public Faculty(String deptname, String designation, float salary, Date joiningdate) {
         this.deptname = deptname;
         this.designation = designation;

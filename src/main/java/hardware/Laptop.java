@@ -5,6 +5,9 @@ public class Laptop extends Computer
     private String screensize;
     private Float weight;
 
+    public Laptop() {
+    }
+
     public Laptop(int id, String companyname, String screensize, Float weight) {
         super(id, companyname);
         this.screensize = screensize;

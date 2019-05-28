@@ -1,5 +1,7 @@
 package com.lambton;
 
+import hardware.Computer;
+
 import java.util.Arrays;
 import java.util.Date;
 
@@ -30,6 +32,18 @@ public class Student extends Person
         this.result = result;
         this.coursename=coursename;
     }
+    public Student(int id, String firstname, String lastname, char gender, Date birthdate, String email,
+                   float[] marks,String coursename) {
+        super(id, firstname, lastname, gender, birthdate, email);
+        this.marks = marks;
+        this.coursename=coursename;
+    }
+    public Student(int id, String firstname, String lastname, char gender, Date birthdate, String email,Computer computer,
+                   float[] marks,String coursename) {
+        super(id, firstname, lastname, gender, birthdate, email,computer);
+        this.marks = marks;
+        this.coursename=coursename;
+    }
 
     public String getCoursename() {
         return coursename;
@@ -50,27 +64,12 @@ public class Student extends Person
     public float getTotal() {
         return total;
     }
-
-    public void setTotal(float total) {
-        this.total = total;
-    }
-
     public float getPer() {
         return per;
     }
-
-    public void setPer(float per) {
-        this.per = per;
-    }
-
     public String getResult() {
         return result;
     }
-
-    public void setResult(String result) {
-        this.result = result;
-    }
-
     @Override
     public String toString() {
         return "Student{" +
@@ -170,6 +169,7 @@ public class Student extends Person
         System.out.println(" Course : "+getCoursename());
         System.out.println(" Birth Date : "+getBirthdate());
         System.out.println(" Email : "+getEmail());
+        super.displayComputerDetails();
         int i=1;
         for(float mark:getMarks())
         {

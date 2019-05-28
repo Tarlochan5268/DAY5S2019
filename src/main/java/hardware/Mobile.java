@@ -5,6 +5,9 @@ public class Mobile extends Computer {
     private boolean canMakeCall;
     private String providerName; //Rogers , Bell , TELUS
 
+    public Mobile() {
+    }
+
     public Mobile(int id, String companyname, String operatingSystemName, boolean canMakeCall, String providerName) {
         super(id, companyname);
         this.operatingSystemName = operatingSystemName;

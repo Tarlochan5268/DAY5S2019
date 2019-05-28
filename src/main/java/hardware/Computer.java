@@ -28,4 +28,10 @@ public class Computer
     public void setCompanyname(String companyname) {
         this.companyname = companyname;
     }
+
+    public void displayComputerDetails()
+    {
+        System.out.println(" Computer Id : "+getId());
+        System.out.println(" Company Name : "+getCompanyname());
+    }
 }
