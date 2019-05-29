@@ -1,5 +1,7 @@
 package com.lambton;
 
+import hardware.Computer;
+
 import java.util.Date;
 
 public class Faculty extends Person
@@ -21,6 +23,14 @@ public class Faculty extends Person
 
     public Faculty(int id, String firstname, String lastname, char gender, Date birthdate, String email, String deptname, String designation, float salary, Date joiningdate) {
         super(id, firstname, lastname, gender, birthdate, email);
+        this.deptname = deptname;
+        this.designation = designation;
+        this.salary = salary;
+        this.joiningdate = joiningdate;
+    }
+    public Faculty(int id, String firstname, String lastname, char gender, Date birthdate, String email, Computer computer,
+                   String deptname, String designation, float salary, Date joiningdate) {
+        super(id, firstname, lastname, gender, birthdate, email,computer);
         this.deptname = deptname;
         this.designation = designation;
         this.salary = salary;
