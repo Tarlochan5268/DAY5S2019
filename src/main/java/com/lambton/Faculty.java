@@ -1,12 +1,12 @@
 package com.lambton;
 
-import Interface.InheritanceExample;
+import Interface.IDisplay;
 import hardware.Computer;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-public class Faculty extends Person implements InheritanceExample
+public class Faculty extends Person implements IDisplay
 {
     private String deptname;
     private String designation;

@@ -1,6 +1,6 @@
 package Interface;
 
-public interface InheritanceExample
+public interface IDisplay
 {
     public abstract void display();
 }

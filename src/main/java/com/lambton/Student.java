@@ -1,13 +1,14 @@
 package com.lambton;
 
-import Interface.InheritanceExample;
+import Interface.IDisplay;
 import hardware.Computer;
 
 import java.util.Arrays;
 import java.util.Date;
 
-public class Student extends Person implements InheritanceExample
+public class Student extends Person implements IDisplay
 {
+    public static  int COUNT=0;
     private float []marks;
     private float total;
     private float per;
