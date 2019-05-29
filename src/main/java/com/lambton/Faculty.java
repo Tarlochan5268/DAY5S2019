@@ -3,6 +3,7 @@ package com.lambton;
 import hardware.Computer;
 
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 public class Faculty extends Person
 {
@@ -28,8 +29,7 @@ public class Faculty extends Person
         this.salary = salary;
         this.joiningdate = joiningdate;
     }
-    public Faculty(int id, String firstname, String lastname, char gender, Date birthdate, String email, Computer computer,
-                   String deptname, String designation, float salary, Date joiningdate) {
+    public Faculty(int id, String firstname, String lastname, char gender, Date birthdate, String email, Computer computer,String deptname, String designation, float salary, Date joiningdate) {
         super(id, firstname, lastname, gender, birthdate, email,computer);
         this.deptname = deptname;
         this.designation = designation;
@@ -79,6 +79,14 @@ public class Faculty extends Person
                 '}';
     }
 
+    public String calculateJoinDays()
+    {
+        Date cdate=new Date(2018,5,28);
+        long diff = cdate.getTime() - this.getJoiningdate().getTime();
+        long dayss = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+        String days=String.valueOf(dayss);
+        return days;
+    }
     public void displayFacultyInfo()
     {
         System.out.println("--------------------------------------------------");
@@ -90,10 +98,12 @@ public class Faculty extends Person
         System.out.println(" Gender : "+getGender());
         System.out.println(" Birth Date : "+getBirthdate());
         System.out.println(" Email : "+getEmail());
+        super.displayComputerDetails();
         System.out.println(" Department Name : "+getDeptname());
         System.out.println(" Designation : "+getDesignation());
         System.out.println(" Salary : "+getSalary());
         System.out.println(" Joining Date : "+getJoiningdate());
+        System.out.println(" Working Days : "+calculateJoinDays());
 
         System.out.println("--------------------------------------------------");
 
