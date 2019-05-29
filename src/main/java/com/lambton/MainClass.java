@@ -17,9 +17,9 @@ public class MainClass
         student.calculateTotal();
         student.calculatePer();
         student.calculateResult();
-        student.displayStudentInfo();
+        student.display();
         Faculty faculty=new Faculty(5268,"TarlochanPreet","Singh",'M',birth,"tarlochan5268@gmail.com",computer,"MADT"
                 ,"Instructor",10000,join);
-        faculty.displayFacultyInfo();
+        faculty.display();
     }
 }

@@ -1,11 +1,12 @@
 package com.lambton;
 
+import Interface.InheritanceExample;
 import hardware.Computer;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-public class Faculty extends Person
+public class Faculty extends Person implements InheritanceExample
 {
     private String deptname;
     private String designation;
@@ -89,6 +90,28 @@ public class Faculty extends Person
     }
     public void displayFacultyInfo()
     {
+        System.out.println("--------------------------------------------------");
+        System.out.println("--------------- Faculty Information  -------------");
+        System.out.println("--------------------------------------------------");
+
+        System.out.println(" Faculty ID : "+getId());
+        System.out.println(" Full Name : "+getFullName());
+        System.out.println(" Gender : "+getGender());
+        System.out.println(" Birth Date : "+getBirthdate());
+        System.out.println(" Email : "+getEmail());
+        super.displayComputerDetails();
+        System.out.println(" Department Name : "+getDeptname());
+        System.out.println(" Designation : "+getDesignation());
+        System.out.println(" Salary : "+getSalary());
+        System.out.println(" Joining Date : "+getJoiningdate());
+        System.out.println(" Working Days : "+calculateJoinDays());
+
+        System.out.println("--------------------------------------------------");
+
+    }
+
+    @Override
+    public void display() {
         System.out.println("--------------------------------------------------");
         System.out.println("--------------- Faculty Information  -------------");
         System.out.println("--------------------------------------------------");

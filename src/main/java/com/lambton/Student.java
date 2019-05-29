@@ -1,11 +1,12 @@
 package com.lambton;
 
+import Interface.InheritanceExample;
 import hardware.Computer;
 
 import java.util.Arrays;
 import java.util.Date;
 
-public class Student extends Person
+public class Student extends Person implements InheritanceExample
 {
     private float []marks;
     private float total;
@@ -159,6 +160,33 @@ public class Student extends Person
 
     public void displayStudentInfo()
     {
+        System.out.println("--------------------------------------------------");
+        System.out.println("--------------- Student Information  -------------");
+        System.out.println("--------------------------------------------------");
+
+        System.out.println(" Student ID : "+getId());
+        System.out.println(" Full Name : "+getFullName());
+        System.out.println(" Gender : "+getGender());
+        System.out.println(" Course : "+getCoursename());
+        System.out.println(" Birth Date : "+getBirthdate());
+        System.out.println(" Email : "+getEmail());
+        super.displayComputerDetails();
+        int i=1;
+        for(float mark:getMarks())
+        {
+            System.out.println(" Subject ["+i+"] : "+mark);
+            i++;
+        }
+        System.out.println(" Total Marks : "+getTotal());
+        System.out.println(" Percentage : "+getPer());
+        System.out.println(" Result : "+getResult());
+
+        System.out.println("--------------------------------------------------");
+
+    }
+
+    @Override
+    public void display() {
         System.out.println("--------------------------------------------------");
         System.out.println("--------------- Student Information  -------------");
         System.out.println("--------------------------------------------------");
