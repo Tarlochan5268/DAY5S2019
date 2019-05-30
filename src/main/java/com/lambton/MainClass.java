@@ -14,9 +14,6 @@ public class MainClass
         Date join=new Date(2018,4,5);
         Student student=new Student(751142,"Das TarlochanPreet","Singh",'M',birth,"brotherstarlochan5268@gmail.com",computer,
                 marks,"MADT");
-        Student.COUNT++;
-        student.COUNT++;
-        System.out.println("COUNT : "+Student.COUNT); //2
         student.calculateTotal();
         student.calculatePer();
         student.calculateResult();
@@ -24,5 +21,15 @@ public class MainClass
         Faculty faculty=new Faculty(5268,"TarlochanPreet","Singh",'M',birth,"tarlochan5268@gmail.com",computer,"MADT"
                 ,"Instructor",10000,join);
         faculty.display();
+        /*
+        if(p instanceof Student)
+        {
+            Student s=(Student)p;
+        }
+        else if(p instanceof Faculty)
+        {
+            Faculty f=(Faculty)p;
+        }
+         */
     }
 }

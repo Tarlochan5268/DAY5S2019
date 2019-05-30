@@ -8,7 +8,6 @@ import java.util.Date;
 
 public class Student extends Person implements IDisplay
 {
-    public static  int COUNT=0;
     private float []marks;
     private float total;
     private float per;

@@ -1,10 +1,11 @@
 package com.lambton;
 
+import Interface.IDisplay;
 import hardware.Computer;
 
 import java.util.Date;
 
-public abstract class Person
+public abstract class Person implements IDisplay
 {
     private int id;
     private String firstname;
@@ -44,6 +45,19 @@ public abstract class Person
         this.computer=computer;
     }
 
+    @Override
+    public void display() {
+        System.out.println("--------------- Person Information  -------------");
+        System.out.println("--------------------------------------------------");
+
+        System.out.println(" Student ID : "+getId());
+        System.out.println(" Full Name : "+getFullName());
+        System.out.println(" Gender : "+getGender());
+        System.out.println(" Birth Date : "+getBirthdate());
+        System.out.println(" Email : "+getEmail());
+
+        System.out.println("--------------------------------------------------");
+    }
 
     public int getId() {
         return id;
